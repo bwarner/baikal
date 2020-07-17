@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import { css } from '@emotion/core';
 import { useContext } from 'react';
 import { defaultProps, propTypes } from './prop-types';
@@ -7,7 +8,6 @@ import ThemeContext from '../css/theme-provider';
 export default function Button({
   styles,
   buttonType,
-  type,
   outline,
   rounded,
   ...props
@@ -49,7 +49,7 @@ export default function Button({
   // eslint-disable-next-line react/button-has-type,react/jsx-props-no-spreading
   return (
     <button
-      type={type}
+      type="button"
       css={[baseButtonStyle, buttonStyle, styles]}
       {...props}
     />

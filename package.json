@@ -96,7 +96,7 @@
     "prettier-eslint": "^10.1.0",
     "prettier-eslint-cli": "^5.0.0",
     "webpack": "^4.43.0",
-    "webpack-bundle-analyzer": "^2.13.1",
+    "webpack-bundle-analyzer": "^3.3.2",
     "webpack-cli": "^3.3.11"
   }
 }

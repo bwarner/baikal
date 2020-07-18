@@ -1,5 +1,5 @@
 {
-  "name": "Baikal Template",
+  "name": "baikal-template",
   "version": "1.0.0",
   "description": "This is an implementation of a design template",
   "main": "lib/index.js",

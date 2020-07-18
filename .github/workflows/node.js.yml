@@ -26,13 +26,17 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
     - run: npm run build --if-present
-    - run: echo node ./node_modules/.bin/gh-pages -p storybook-static  -r https://$GITHUB_TOKEN@github.com/bwarner/baikal.git
-    - run: echo node ./node_modules/.bin/gh-pages -p storybook-static  -r https://$GH_TOKEN@github.com/bwarner/baikal.git
-    - run: env
     - uses: actions/upload-artifact@v2
       with:
         name: Storybook Static Site
         path: storybook-static
-    - run: npm run deploy -- -r https://${{ secrets.GITHUB_TOKEN }}@github.com/bwarner/baikal.git
+    - name: Deploy to GitHub Pages
+      if: success()
+      uses: crazy-max/ghaction-github-pages@v2
+      with:
+        target_branch: gh-pages
+        build_dir: storybook-static
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 

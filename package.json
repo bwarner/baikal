@@ -1,17 +1,16 @@
 {
-  "name": "template",
+  "name": "baikal-template",
   "version": "1.0.0",
-  "description": "",
+  "description": "This is an implementation of a design template",
   "main": "lib/index.js",
   "scripts": {
     "test": "jest",
-    "bundle:analyze": "webpack-bundle-analyzer .next/webpack-stats.json .next/bundles",
-    "bundle:size": "bundlesize",
     "lint": "eslint --cache --ignore-path .gitignore --ext .js --ext .jsx .",
     "format": "prettier-eslint --ignore \"**/.next/**\" --ignore \"**/tmp/**\" --write ${PWD}\"**/*.{js,jsx}\"",
     "format:file": "prettier-eslint --write",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build": "build-storybook",
+    "deploy": "gh-pages -p storybook-static  -r https://$GH_TOKEN@github.com/bwarner/baikal.git"
   },
   "bundlesize": [
     {
@@ -20,9 +19,7 @@
     }
   ],
   "keywords": [
-    "mortgage",
-    "loan",
-    "real estate"
+    "template"
   ],
   "author": "Byron Warner",
   "license": "Apache 2.0",
@@ -31,7 +28,6 @@
     "es6-promise": "4.1.1",
     "facepaint": "^1.2.1",
     "isomorphic-unfetch": "^2.0.0",
-    "npm": "^6.14.6",
     "prop-types": "^15.6.1",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
@@ -66,11 +62,11 @@
     "@babel/runtime": "^7.9.6",
     "@babel/runtime-corejs3": "^7.9.6",
     "@emotion/babel-preset-css-prop": "^10.0.27",
-    "@storybook/addon-actions": "^5.3.18",
-    "@storybook/addon-storyshots": "^5.3.17",
-    "@storybook/addon-storyshots-puppeteer": "^5.3.17",
-    "@storybook/addon-viewport": "^5.3.18",
-    "@storybook/react": "^5.3.17",
+    "@storybook/addon-actions": "^5.3.19",
+    "@storybook/addon-storyshots": "^5.3.19",
+    "@storybook/addon-storyshots-puppeteer": "^5.3.19",
+    "@storybook/addon-viewport": "^5.3.19",
+    "@storybook/react": "^5.3.19",
     "@storybook/storybook-deployer": "^2.8.3",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.1.0",
@@ -87,6 +83,7 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.20.0",
     "eslint-plugin-react-hooks": "^2.5.1",
+    "gh-pages": "^3.1.0",
     "jest": "^26.0.1",
     "jest-config": "^26.0.1",
     "jest-diff": "^26.0.1",

@@ -26,6 +26,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
     - run: npm run build --if-present
+    - run: echo node ./node_modules/.bin/gh-pages -p storybook-static  -r https://$GH_TOKEN@github.com/bwarner/baikal.git
     - uses: actions/upload-artifact@v2
       with:
         name: Storybook Static Site

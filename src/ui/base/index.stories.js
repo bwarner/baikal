@@ -1,5 +1,9 @@
+/** @jsx jsx */
+import { jsx, css } from '@emotion/core';
+import styled from '@emotion/styled';
 import { Col, Row } from '../grid';
 import Button from '../button/button';
+import Input, { Styles } from '../form/input';
 import PageDecorator from '../../decorators/page-decorator';
 
 export default {
@@ -15,87 +19,117 @@ const baseButton = {
   margin: 5,
 };
 
-export const Input = () => (
-  <Row columns={4} width={1}>
-    <Col>
-      <Button buttonType="primary" styles={baseButton}>
-        Button
-      </Button>
-    </Col>
-    <Col>
-      <Button buttonType="secondary" styles={baseButton}>
-        Button
-      </Button>
-    </Col>
-    <Col>
-      <Button buttonType="tertiary" styles={baseButton}>
-        Button
-      </Button>
-    </Col>
-    <Col>
-      <Button buttonType="quaternary" styles={baseButton}>
-        Button
-      </Button>
-    </Col>
-    <Col>
-      <Button buttonType="primary" outline styles={baseButton}>
-        Button
-      </Button>
-    </Col>
-    <Col>
-      <Button buttonType="secondary" outline styles={baseButton}>
-        Button
-      </Button>
-    </Col>
-    <Col>
-      <Button buttonType="tertiary" outline styles={baseButton}>
-        Button
-      </Button>
-    </Col>
-    <Col>
-      <Button buttonType="quaternary" outline styles={baseButton}>
-        Button
-      </Button>
-    </Col>
-    <Col>
-      <Button buttonType="primary" rounded styles={baseButton}>
-        Button
-      </Button>
-    </Col>
-    <Col>
-      <Button buttonType="secondary" rounded styles={baseButton}>
-        Button
-      </Button>
-    </Col>
-    <Col>
-      <Button buttonType="tertiary" rounded styles={baseButton}>
-        Button
-      </Button>
-    </Col>
-    <Col>
-      <Button buttonType="quaternary" rounded styles={baseButton}>
-        Button
-      </Button>
-    </Col>
-    <Col>
-      <Button buttonType="primary" rounded outline styles={baseButton}>
-        Button
-      </Button>
-    </Col>
-    <Col>
-      <Button buttonType="secondary" rounded outline styles={baseButton}>
-        Button
-      </Button>
-    </Col>
-    <Col>
-      <Button buttonType="tertiary" rounded outline styles={baseButton}>
-        Button
-      </Button>
-    </Col>
-    <Col>
-      <Button buttonType="quaternary" rounded outline styles={baseButton}>
-        Button
-      </Button>
-    </Col>
-  </Row>
+const cellStyle = css`
+  display: flex;
+  flex-direction: column;
+`;
+
+const CellHeader = styled.div(`
+  text-align: left;
+  margin: 5px;
+  font-size: 12px;
+`);
+export const Base = () => (
+  <>
+    <Row columns={4} width={1}>
+      <Col>
+        <Button buttonType="primary" styles={baseButton}>
+          Button
+        </Button>
+      </Col>
+      <Col>
+        <Button buttonType="secondary" styles={baseButton}>
+          Button
+        </Button>
+      </Col>
+      <Col>
+        <Button buttonType="tertiary" styles={baseButton}>
+          Button
+        </Button>
+      </Col>
+      <Col>
+        <Button buttonType="quaternary" styles={baseButton}>
+          Button
+        </Button>
+      </Col>
+      <Col>
+        <Button buttonType="primary" outline styles={baseButton}>
+          Button
+        </Button>
+      </Col>
+      <Col>
+        <Button buttonType="secondary" outline styles={baseButton}>
+          Button
+        </Button>
+      </Col>
+      <Col>
+        <Button buttonType="tertiary" outline styles={baseButton}>
+          Button
+        </Button>
+      </Col>
+      <Col>
+        <Button buttonType="quaternary" outline styles={baseButton}>
+          Button
+        </Button>
+      </Col>
+      <Col>
+        <Button buttonType="primary" rounded styles={baseButton}>
+          Button
+        </Button>
+      </Col>
+      <Col>
+        <Button buttonType="secondary" rounded styles={baseButton}>
+          Button
+        </Button>
+      </Col>
+      <Col>
+        <Button buttonType="tertiary" rounded styles={baseButton}>
+          Button
+        </Button>
+      </Col>
+      <Col>
+        <Button buttonType="quaternary" rounded styles={baseButton}>
+          Button
+        </Button>
+      </Col>
+      <Col>
+        <Button buttonType="primary" rounded outline styles={baseButton}>
+          Button
+        </Button>
+      </Col>
+      <Col>
+        <Button buttonType="secondary" rounded outline styles={baseButton}>
+          Button
+        </Button>
+      </Col>
+      <Col>
+        <Button buttonType="tertiary" rounded outline styles={baseButton}>
+          Button
+        </Button>
+      </Col>
+      <Col>
+        <Button buttonType="quaternary" rounded outline styles={baseButton}>
+          Button
+        </Button>
+      </Col>
+    </Row>
+    <Row>
+      <Col css={cellStyle}>
+        <CellHeader>Active</CellHeader>
+        <Input css={css({ width: 230, lineHeight: '45px' })} />
+      </Col>
+      <Col css={cellStyle}>
+        <CellHeader>Success</CellHeader>
+        <Input css={css({ width: 230, lineHeight: '45px' }, Styles.Success)} />
+      </Col>
+      <Col css={cellStyle}>
+        <CellHeader>Error</CellHeader>
+        <Input css={css({ width: 230, lineHeight: '45px' }, Styles.Error)} />
+      </Col>
+      <Col css={cellStyle}>
+        <CellHeader>Disabled</CellHeader>
+        <Input css={css({ width: 230, lineHeight: '45px' }, Styles.Disabled)} />
+      </Col>
+    </Row>
+  </>
 );

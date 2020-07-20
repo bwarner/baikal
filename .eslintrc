@@ -87,7 +87,7 @@
   "overrides": [
     {
       "files": [
-        "src/**/__tests__/**/*.js"
+        "*.js"
       ],
       "env": {
         "jest": true,

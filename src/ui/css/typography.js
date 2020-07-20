@@ -1,6 +1,6 @@
 import { injectGlobal } from 'emotion';
 
-function Typography({ fontFamily, baseSize, typeScale }) {
+function Typography({ fontFamily, baseSize, typeScale, input }) {
   // eslint-disable-next-line no-unused-expressions
   injectGlobal`
   :root {
@@ -16,7 +16,14 @@ function Typography({ fontFamily, baseSize, typeScale }) {
     --button-border-color: transparent;
     --button-border-radius: 0;
     --button-hover-opacity: 0.7;
+    --fv-input-background-color: ${input.base.backgroundColor};
+    --fv-input-border: ${input.base.border};
+    --fv-input-border-radius: ${input.base.borderRadius};
   }
+  * { box-sizing: border-box; }
+  h1: { font-size: --var(h1); }
+  h2: { font-size: --var(h2); }
+  h3: { font-size: --var(h3); }
   `;
 }
 export default Typography;

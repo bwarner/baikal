@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core';
-import * as fonts from './fonts';
+import * as icons from './icons';
 
 import PageDecorator from '../../decorators/page-decorator';
 
@@ -21,8 +21,8 @@ export const Glyphs = () => (
         grid-templage-colu: 50px;
       `}
     >
-      {Object.keys(fonts).map((key) => (
-        <div key={key}>{fonts[key]()}</div>
+      {Object.keys(icons).map((key) => (
+        <div key={key}>{icons[key]()}</div>
       ))}
     </div>
   </>

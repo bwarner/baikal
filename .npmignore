@@ -62,3 +62,5 @@ coverage
 .pnp.*
 
 *.stories.js
+.storybook
+.github

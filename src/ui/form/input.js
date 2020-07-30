@@ -1,9 +1,7 @@
 /** @jsx jsx */
 import { jsx, css } from '@emotion/core';
 import PropTypes from 'prop-types';
-import InputErrorImage from '../svg-background/input-success.svg';
-import InputSuccessImage from '../svg-background/input-error.svg';
-
+import { InputErrorImage, InputSuccessImage } from '../svg-background';
 
 const baseIndicatorStyle = {
   backgroundPosition: 'right 15px center',

@@ -3,7 +3,7 @@ import { css } from '@emotion/core';
 import { useContext } from 'react';
 import { defaultProps, propTypes } from './prop-types';
 import { baseButtonStyle } from './base-style';
-import ThemeContext from '../css/theme-provider';
+import ThemeContext from '../css/theme-context';
 
 export default function Button({
   styles,

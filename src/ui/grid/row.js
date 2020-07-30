@@ -14,7 +14,7 @@ export default function Row({
   tag: Tag, columns = 4, width, extraCls, children,
 }) {
   const rowStyle = {
-    '--column': columns,
+    '--columns': columns,
     '--width': width,
   };
   return <Tag css={[row, rowStyle, extraCls]}>{children}</Tag>;

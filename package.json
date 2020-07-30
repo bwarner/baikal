@@ -1,29 +1,26 @@
 {
-  "name": "baikal-template",
+  "name": "@farvisionllc/baikal",
   "version": "1.0.0",
   "description": "This is an implementation of a design template",
-  "main": "lib/index.js",
+  "main": "dist/bundle.js",
+  "module": "src/index",
   "scripts": {
     "test": "jest",
     "lint": "eslint --cache --ignore-path .gitignore --ext .js --ext .jsx .",
     "format": "prettier-eslint --ignore \"**/.next/**\" --ignore \"**/tmp/**\" --write ${PWD}\"**/*.{js,jsx}\"",
     "format:file": "prettier-eslint --write",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook -p 6006 -s ./static",
     "build": "build-storybook",
+    "bundle": "webpack",
     "deploy": "gh-pages -p storybook-static  -r https://$GH_TOKEN@github.com/bwarner/baikal.git"
   },
-  "bundlesize": [
-    {
-      "path": ".next/bundles/pages/!(_document).js",
-      "maxSize": "17 kB"
-    }
-  ],
   "keywords": [
     "template"
   ],
   "author": "Byron Warner",
   "license": "Apache 2.0",
   "dependencies": {
+    "babel-plugin-react-require": "^3.1.3",
     "emotion": "^10.0.27",
     "es6-promise": "4.1.1",
     "facepaint": "^1.2.1",
@@ -41,8 +38,8 @@
     "@babel/plugin-proposal-class-properties": "^7.8.3",
     "@babel/plugin-proposal-decorators": "^7.8.3",
     "@babel/plugin-proposal-do-expressions": "^7.8.3",
-    "@babel/plugin-proposal-export-default-from": "^7.8.3",
-    "@babel/plugin-proposal-export-namespace-from": "^7.8.3",
+    "@babel/plugin-proposal-export-default-from": "^7.10.4",
+    "@babel/plugin-proposal-export-namespace-from": "^7.10.4",
     "@babel/plugin-proposal-function-bind": "^7.8.3",
     "@babel/plugin-proposal-function-sent": "^7.8.3",
     "@babel/plugin-proposal-json-strings": "^7.8.3",
@@ -92,6 +89,7 @@
     "jest-junit": "^10.0.0",
     "prettier-eslint": "^10.1.0",
     "prettier-eslint-cli": "^5.0.0",
+    "svg-url-loader": "^6.0.0",
     "webpack": "^4.43.0",
     "webpack-bundle-analyzer": "^3.3.2",
     "webpack-cli": "^3.3.11"

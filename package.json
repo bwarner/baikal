@@ -10,7 +10,7 @@
     "format": "prettier-eslint --ignore \"**/.next/**\" --ignore \"**/tmp/**\" --write ${PWD}\"**/*.{js,jsx}\"",
     "format:file": "prettier-eslint --write",
     "storybook": "start-storybook -p 6006 -s ./static",
-    "build": "build-storybook",
+    "build": "build-storybook -s ./static",
     "bundle": "webpack",
     "deploy": "gh-pages -p storybook-static  -r https://$GH_TOKEN@github.com/bwarner/baikal.git"
   },

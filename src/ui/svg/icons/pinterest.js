@@ -1,3 +1,4 @@
 import Icon from '../icon.js';
 
-export default () => <Icon code={60113} />;
+const Pinterest = () => <Icon code={60113} />;
+export default Pinterest;

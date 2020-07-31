@@ -1,6 +1,6 @@
 {
   "name": "@farvisionllc/baikal",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This is an implementation of a design template",
   "main": "dist/bundle.js",
   "module": "src/index",

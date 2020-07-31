@@ -1,3 +1,4 @@
 import Icon from '../icon.js';
 
-export default () => <Icon code={60061} />;
+const Youtube = () => <Icon code={60061} />;
+export default Youtube;

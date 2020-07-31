@@ -1,3 +1,4 @@
 import Icon from '../icon.js';
 
-export default () => <Icon code={59758} />;
+const Bubble2 = () => <Icon code={59758} />;
+export default Bubble2;

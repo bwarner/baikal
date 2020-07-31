@@ -1,3 +1,4 @@
 import Icon from '../icon.js';
 
-export default () => <Icon code={59666} />;
+const Play = () => <Icon code={59666} />;
+export default Play;

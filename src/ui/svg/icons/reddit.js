@@ -1,3 +1,4 @@
 import Icon from '../icon.js';
 
-export default () => <Icon code={60102} />;
+const Reddit = () => <Icon code={60102} />;
+export default Reddit;

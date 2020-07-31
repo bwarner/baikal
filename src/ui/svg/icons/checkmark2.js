@@ -1,3 +1,4 @@
 import Icon from '../icon.js';
 
-export default () => <Icon code={59921} />;
+const Checkmark2 = () => <Icon code={59921} />;
+export default Checkmark2;

@@ -1,3 +1,4 @@
 import Icon from '../icon.js';
 
-export default () => <Icon code={59988} />;
+const RadioChecked = () => <Icon code={59988} />;
+export default RadioChecked;

@@ -1,3 +1,4 @@
 import Icon from '../icon.js';
 
-export default () => <Icon code={60120} />;
+const Paypal = () => <Icon code={60120} />;
+export default Paypal;

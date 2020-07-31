@@ -1,3 +1,4 @@
 import Icon from '../icon.js';
 
-export default () => <Icon code={60017} />;
+const Table2 = () => <Icon code={60017} />;
+export default Table2;

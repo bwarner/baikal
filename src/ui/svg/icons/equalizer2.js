@@ -1,3 +1,4 @@
 import Icon from '../icon.js';
 
-export default () => <Icon code={59795} />;
+const Equalizer2 = () => <Icon code={59795} />;
+export default Equalizer2;

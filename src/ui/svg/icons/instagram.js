@@ -1,3 +1,4 @@
 import Icon from '../icon.js';
 
-export default () => <Icon code={60050} />;
+const Instagram = () => <Icon code={60050} />;
+export default Instagram;

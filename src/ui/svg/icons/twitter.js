@@ -1,3 +1,4 @@
 import Icon from '../icon.js';
 
-export default () => <Icon code={60054} />;
+const Twitter = () => <Icon code={60054} />;
+export default Twitter;

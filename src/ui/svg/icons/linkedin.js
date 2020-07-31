@@ -1,3 +1,4 @@
 import Icon from '../icon.js';
 
-export default () => <Icon code={60105} />;
+const Linkedin = () => <Icon code={60105} />;
+export default Linkedin;

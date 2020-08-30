@@ -5,10 +5,16 @@ import PropTypes from 'prop-types';
 
 const defaultFontFamily = 'icomoon';
 
-const Icon = memo(function Icon({ className, code, fontFamily = defaultFontFamily }) {
+const Icon = memo(function Icon({
+  className,
+  style,
+  code,
+  fontFamily = defaultFontFamily,
+}) {
   return (
     <span
       className={className}
+      style={style}
       css={css`
       font-family: ${fontFamily} !important;
       speak: never;
@@ -29,6 +35,7 @@ Icon.propTypes = {
   code: PropTypes.number,
   fontFamily: PropTypes.string,
   className: PropTypes.string,
+  style: PropTypes.object,
 };
 
 export default Icon;

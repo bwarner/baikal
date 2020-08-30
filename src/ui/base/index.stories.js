@@ -4,6 +4,7 @@ import styled from '@emotion/styled';
 import { Col, Row } from '../grid';
 import Button from '../button/button';
 import Input, { Styles } from '../form/input';
+import InputButton from '../form/input-button';
 import PageDecorator from '../../decorators/page-decorator';
 
 export default {
@@ -29,6 +30,7 @@ const CellHeader = styled.div(`
   margin: 5px;
   font-size: 12px;
 `);
+
 export const Base = () => (
   <>
     <Row columns={4} width={1}>
@@ -129,6 +131,29 @@ export const Base = () => (
       <Col css={cellStyle}>
         <CellHeader>Disabled</CellHeader>
         <Input css={css({ width: 230, lineHeight: '45px' }, Styles.Disabled)} />
+      </Col>
+    </Row>
+    <Row columns={2} width={1}>
+      <Col>
+        <Input css={css({ width: 475, lineHeight: '45px' }, Styles.Username)} />
+      </Col>
+      <Col>
+        <Input css={css({ width: 475, lineHeight: '45px' }, Styles.Password)} />
+      </Col>
+    </Row>
+    <Row columns={4} width={1}>
+      <Col>
+        <InputButton
+          css={css({ width: 230, height: 45, lineHeight: '45px' })}
+        />
+      </Col>
+      <Col>
+        <Input
+          css={css({ width: 230, lineHeight: '45px' }, Styles.WithButton)}
+        />
+      </Col>
+      <Col width={2}>
+        <Input css={css({ width: 475, lineHeight: '45px' }, Styles.Email)} />
       </Col>
     </Row>
   </>

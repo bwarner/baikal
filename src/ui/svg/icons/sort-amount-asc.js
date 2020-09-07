@@ -1,4 +1,5 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import Icon from '../icon.js';
 
-const SortAmountAsc = () => <Icon code={59980} />;
+const SortAmountAsc = ({ ...props }) => <Icon code={59980} {...props} />;
 export default SortAmountAsc;

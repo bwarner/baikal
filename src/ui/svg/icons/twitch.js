@@ -1,4 +1,5 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import Icon from '../icon.js';
 
-const Twitch = () => <Icon code={60063} />;
+const Twitch = ({ ...props }) => <Icon code={60063} {...props} />;
 export default Twitch;

@@ -1,4 +1,5 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import Icon from '../icon.js';
 
-const ZoomOut = () => <Icon code={59784} />;
+const ZoomOut = ({ ...props }) => <Icon code={59784} {...props} />;
 export default ZoomOut;

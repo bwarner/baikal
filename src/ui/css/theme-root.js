@@ -1,6 +1,8 @@
 import { injectGlobal } from 'emotion';
 
-function ThemeRoot({ fontFamily, baseSize, typeScale, input }) {
+function ThemeRoot({
+  fontFamily, baseSize, typeScale, input,
+}) {
   // eslint-disable-next-line no-unused-expressions
   injectGlobal`
   :root {

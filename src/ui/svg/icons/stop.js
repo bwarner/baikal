@@ -1,4 +1,5 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import Icon from '../icon.js';
 
-const Stop = () => <Icon code={59927} />;
+const Stop = ({ ...props }) => <Icon code={59927} {...props} />;
 export default Stop;

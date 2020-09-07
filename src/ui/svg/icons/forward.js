@@ -1,4 +1,5 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import Icon from '../icon.js';
 
-const Forward = () => <Icon code={59753} />;
+const Forward = ({ ...props }) => <Icon code={59753} {...props} />;
 export default Forward;

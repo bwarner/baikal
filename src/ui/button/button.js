@@ -1,5 +1,6 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import { css } from '@emotion/core';
+/** @jsx jsx */
+import { css, jsx } from '@emotion/core';
 import { useContext } from 'react';
 import { defaultProps, propTypes } from './prop-types';
 import { baseButtonStyle } from './base-style';

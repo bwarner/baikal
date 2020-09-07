@@ -29,6 +29,8 @@ const light = {
     secondary: makeButton({ backgroundColor: '#EA8BFF' }),
     tertiary: makeButton({ backgroundColor: '#6848E1' }),
     quaternary: makeButton({ backgroundColor: '#3CA773' }),
+    dropdown: makeButton({ backgroundColor: '#EEEEEE', color: 'black' }),
+    rightArrow: makeButton({ backgroundColor: '#3CA773', color: 'white' }),
   },
   input: {
     base: {

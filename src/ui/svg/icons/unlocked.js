@@ -1,4 +1,5 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import Icon from '../icon.js';
 
-const Unlocked = () => <Icon code={59792} />;
+const Unlocked = ({ ...props }) => <Icon code={59792} {...props} />;
 export default Unlocked;

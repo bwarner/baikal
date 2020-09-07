@@ -20,9 +20,11 @@ const InputButton = ({ className, tag: Tag, ...rest }) => (
           padding: 0,
           paddingRight: 45,
           lineHeight: 'inherit',
+          width: 'calc(100% - 45px)',
         }}
       />
       <button
+        type="button"
         css={css({
           position: 'absolute',
           cursor: 'pointer',
@@ -32,10 +34,10 @@ const InputButton = ({ className, tag: Tag, ...rest }) => (
           width: 45,
           padding: 'inherit',
           marginTop: 5,
-          color: 'red',
+          color: 'var(--fv-input-foreground-color)',
           height: '100%',
           border: 'none',
-          backgroundColor: 'green',
+          backgroundColor: 'var(--fv-input-background-color)',
         })}
       >
         <CircleDownIcon style={{ width: 'inherit', height: '100%' }} />

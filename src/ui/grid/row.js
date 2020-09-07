@@ -11,7 +11,11 @@ const row = {
 };
 
 export default function Row({
-  tag: Tag, columns = 4, width, extraCls, children,
+  tag: Tag,
+  columns = 4,
+  width,
+  extraCls,
+  children,
 }) {
   const rowStyle = {
     '--columns': columns,
@@ -22,7 +26,7 @@ export default function Row({
 
 Row.propTypes = {
   tag: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
-  columns: PropTypes.number.isRequired,
+  columns: PropTypes.number,
   width: PropTypes.number,
   children: PropTypes.node,
   extraCls: PropTypes.object,

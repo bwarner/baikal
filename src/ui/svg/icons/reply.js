@@ -1,4 +1,5 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import Icon from '../icon.js';
 
-const Reply = () => <Icon code={59754} />;
+const Reply = ({ ...props }) => <Icon code={59754} {...props} />;
 export default Reply;

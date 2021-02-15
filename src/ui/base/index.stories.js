@@ -9,6 +9,12 @@ import RightArrow from '../button/right-arrow';
 import Input, { Styles } from '../form/input';
 import PageDecorator from '../../decorators/page-decorator';
 import ThemeContext from '../css/theme-context';
+import AllPosts from '../social/all-posts';
+import {
+  FacebookButton,
+  PinterestButton,
+  TwitterButton,
+} from '../social/button';
 
 export default {
   title: 'Base',
@@ -169,8 +175,8 @@ export const Base = () => {
       </Row>
       <Row columns={4} width={1}>
         <Col>
-          <label htmlFor="drowdown" css={iconButtonCellStyle}>
-            <Input id="drowdown" />
+          <label htmlFor="dropdown" css={iconButtonCellStyle}>
+            <Input id="dropdown" />
             <Dropdown
               css={css({
                 '--button-color': theme.buttons.dropdown.color,
@@ -194,6 +200,98 @@ export const Base = () => {
         </Col>
         <Col width={2}>
           <Input css={css({ width: 475, lineHeight: '45px' }, Styles.Email)} />
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <TwitterButton size="lg" rounded />
+          <TwitterButton size="lg" rounded outline />
+        </Col>
+        <Col>
+          <TwitterButton size="lg" />
+          <TwitterButton size="lg" outline />
+        </Col>
+      </Row>
+
+      <Row>
+        <Col>
+          <FacebookButton size="lg" rounded />
+          <FacebookButton size="lg" rounded outline />
+        </Col>
+        <Col>
+          <FacebookButton size="lg" />
+          <FacebookButton size="lg" outline />
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <PinterestButton size="lg" rounded />
+          <PinterestButton size="lg" rounded outline />
+        </Col>
+        <Col>
+          <PinterestButton size="lg" />
+          <PinterestButton size="lg" outline />
+        </Col>
+      </Row>
+      <Row columns={5}>
+        <Col>
+          <AllPosts names={['twitter', 'facebook', 'instagram']} />
+        </Col>
+        <Col css={css({ height: 175 })} width={2}>
+          <Row
+            css={css`
+              height: 100%;
+            `}
+            width={1}
+            columns={3}
+          >
+            <Col width={1}>
+              <TwitterButton size="md" />
+            </Col>
+            <Col>
+              <FacebookButton size="md" />
+            </Col>
+            <Col>
+              <PinterestButton size="md" />
+            </Col>
+            <Col>
+              <TwitterButton size="md" outline />
+            </Col>
+            <Col>
+              <FacebookButton size="md" outline />
+            </Col>
+            <Col>
+              <PinterestButton size="md" outline />
+            </Col>
+          </Row>
+        </Col>
+        <Col css={css({ height: 175 })} width={2}>
+          <Row
+            css={css`
+              height: 100%;
+            `}
+            width={1}
+            columns={3}
+          >
+            <Col>
+              <TwitterButton size="md" rounded />
+            </Col>
+            <Col>
+              <FacebookButton size="md" rounded />
+            </Col>
+            <Col>
+              <PinterestButton size="md" rounded />
+            </Col>
+            <Col>
+              <TwitterButton size="md" rounded outline />
+            </Col>
+            <Col>
+              <FacebookButton size="md" rounded outline />
+            </Col>
+            <Col>
+              <PinterestButton size="md" rounded outline />
+            </Col>
+          </Row>
         </Col>
       </Row>
     </>

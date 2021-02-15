@@ -1,9 +1,13 @@
 import Checkmark from '../svg-background/input-success.svg';
 
+const borderColor = '#DDDDDD';
 const base = {
   fontFamily: 'Montserrat, Arial, Helvetica-neue, Helvetica, sans-serif',
   baseSize: 11,
   typeScale: 1.33,
+  borderColor,
+  border: `1px solid ${borderColor}`,
+  color: '#3C3D40',
 };
 
 const baseButton = {

@@ -14,14 +14,18 @@ export default function Row({
   tag: Tag,
   columns = 4,
   width,
-  extraCls,
+  className,
   children,
 }) {
   const rowStyle = {
     '--columns': columns,
     '--width': width,
   };
-  return <Tag css={[row, rowStyle, extraCls]}>{children}</Tag>;
+  return (
+    <Tag className={className} css={[row, rowStyle]}>
+      {children}
+    </Tag>
+  );
 }
 
 Row.propTypes = {
@@ -29,7 +33,7 @@ Row.propTypes = {
   columns: PropTypes.number,
   width: PropTypes.number,
   children: PropTypes.node,
-  extraCls: PropTypes.object,
+  className: PropTypes.string,
 };
 
 Row.defaultProps = {

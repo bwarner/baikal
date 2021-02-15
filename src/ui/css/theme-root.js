@@ -1,13 +1,22 @@
 import { injectGlobal } from 'emotion';
 
 function ThemeRoot({
-  fontFamily, baseSize, typeScale, input,
+  fontFamily,
+  border,
+  borderColor,
+  color,
+  baseSize,
+  typeScale,
+  input,
 }) {
   // eslint-disable-next-line no-unused-expressions
   injectGlobal`
   :root {
     --base-size: ${baseSize};
     --type-scale: ${typeScale};
+    --fv-border: ${border};
+    --fv-border-color: ${borderColor};
+    --base-color: ${color};
     --h3: calc(var(--base-size) * var(--type-scale));
     --h2: calc(var(--h1) * var(--type-scale));
     --h1: calc(var(--h2) * var(--type-scale));

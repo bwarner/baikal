@@ -10,7 +10,7 @@ export default function RightArrow({ className, ...props }) {
   return (
     // eslint-disable-next-line react/jsx-props-no-spreading
     <Button
-      buttonType="dropdown"
+      buttonType="quaternary"
       className={className}
       css={css(iconButtonStyle)}
       {...props}

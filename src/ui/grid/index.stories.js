@@ -1,27 +1,28 @@
-import React from 'react';
+/** @jsx jsx */
+import { jsx, css } from '@emotion/core';
 import { Row, Col } from '.';
 
 export default {
   title: 'Grid',
 };
 
-const cellCls = {
+const cellCls = css({
   border: '1px solid red',
   height: '100px',
-};
+});
 
 export function GridStory() {
   return (
     <div>
       <Row columns={4}>
-        <Col extraCls={cellCls}>1</Col>
-        <Col extraCls={cellCls}>2</Col>
-        <Col extraCls={cellCls}>3</Col>
-        <Col extraCls={cellCls}>4</Col>
-        <Col extraCls={cellCls}>5</Col>
+        <Col className={cellCls}>1</Col>
+        <Col className={cellCls}>2</Col>
+        <Col className={cellCls}>3</Col>
+        <Col className={cellCls}>4</Col>
+        <Col className={cellCls}>5</Col>
       </Row>
       <Row columns={4}>
-        <Col width={2} extraCls={cellCls}>
+        <Col width={2} className={cellCls}>
           1
         </Col>
         <Col width={2}>2</Col>

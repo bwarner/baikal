@@ -21,9 +21,12 @@ export const Glyphs = () => (
         grid-templage-colu: 50px;
       `}
     >
-      {Object.keys(icons).map((key) => (
-        <div key={key}>{icons[key]()}</div>
-      ))}
+      {Object.keys(icons).map((key, index, oj) => {
+        const icon = icons[key];
+        debugger;
+        console.log(`key: ${key} icons[${key}]: ${typeof icon}`);
+        return <div key={key}>{icons[key]()}</div>;
+      })}
     </div>
   </>
 );

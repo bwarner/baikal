@@ -7,14 +7,19 @@ import Button from '../button/button';
 import Dropdown from '../button/dropdown';
 import RightArrow from '../button/right-arrow';
 import Input, { Styles } from '../form/input';
+import {
+  Checkbox, RadioButton, ToggleSwitch, Stepper, Choice,
+} from '../form';
 import PageDecorator from '../../decorators/page-decorator';
 import ThemeContext from '../css/theme-context';
 import AllPosts from '../social/all-posts';
+import { SocialShare, SocialShareCell } from '../social/shares';
 import {
   FacebookButton,
   PinterestButton,
   TwitterButton,
 } from '../social/button';
+import { Tags } from '../tags';
 
 export default {
   title: 'Base',
@@ -237,7 +242,7 @@ export const Base = () => {
         <Col>
           <AllPosts names={['twitter', 'facebook', 'instagram']} />
         </Col>
-        <Col css={css({ height: 175 })} width={2}>
+        <Col css={css({ height: 75 })} width={2}>
           <Row
             css={css`
               height: 100%;
@@ -265,7 +270,7 @@ export const Base = () => {
             </Col>
           </Row>
         </Col>
-        <Col css={css({ height: 175 })} width={2}>
+        <Col css={css({ height: 75 })} width={2}>
           <Row
             css={css`
               height: 100%;
@@ -290,6 +295,103 @@ export const Base = () => {
             </Col>
             <Col>
               <PinterestButton size="md" rounded outline />
+            </Col>
+          </Row>
+        </Col>
+      </Row>
+      <Row columns={5} css={{ margin: '10px 0' }}>
+        <Col width={1}>
+          <SocialShare>
+            <SocialShareCell network="facebook" count={122} />
+            <SocialShareCell network="twitter" count={256} />
+            <SocialShareCell network="pinterest" count={50} />
+          </SocialShare>
+        </Col>
+        <Col width={4}>
+          <Row columns={4}>
+            <Col tag="form" width={3}>
+              <Row width={1}>
+                <Col>
+                  <Checkbox
+                    name="checkbox1"
+                    id="checkbox1"
+                    checked
+                    content="Checked"
+                  />
+                </Col>
+                <Col>
+                  <RadioButton
+                    name="radio-button"
+                    id="radio-button1"
+                    checked
+                    content="Radiobutton + check"
+                  />
+                </Col>
+                <Col>
+                  <ToggleSwitch
+                    name="switch1"
+                    id="switch1"
+                    checked
+                    content="On"
+                  />
+                </Col>
+              </Row>
+              <Row width={1}>
+                <Col>
+                  <Checkbox
+                    name="checkbox2"
+                    id="checkbox2"
+                    content="Checkbox"
+                  />
+                </Col>
+                <Col>
+                  <RadioButton
+                    name="radio-button"
+                    id="radio-button2"
+                    content="Radiobutton"
+                  />
+                </Col>
+                <Col>
+                  <ToggleSwitch name="switch2" id="switch2" content="Off" />
+                </Col>
+              </Row>
+            </Col>
+            <Col tag="form" width={1}>
+              <Stepper
+                css={css`
+                  width: 40px;
+                `}
+                name="switch"
+                id="switch"
+                value={1}
+                min={1}
+                step={2}
+                max={100}
+              />
+            </Col>
+          </Row>
+          <Row columns={4}>
+            <Col width={2}>
+              <Tags
+                tags={[
+                  'TRAVEL',
+                  'HOLIDAY',
+                  'LAKE',
+                  'TRIP',
+                  'VISTING',
+                  'HOLIDAY',
+                ]}
+              />
+            </Col>
+            <Col width={2}>
+              <Choice
+                selected="credit"
+                items={{
+                  credit: 'CREDIT CARD',
+                  paypal: 'PAYPAL',
+                  cash: 'CASH',
+                }}
+              />
             </Col>
           </Row>
         </Col>

@@ -8,16 +8,33 @@ const base = {
   borderColor,
   border: `1px solid ${borderColor}`,
   color: '#3C3D40',
+  greyLight: '#B8C6C7',
+  greyDark: '#838D8F',
 };
 
-const baseButton = {
-  color: 'white',
-  backgroundColor: 'black',
-  fontSize: 11,
+export const baseButton = {
+  display: 'inline-block',
   fontWeight: 400,
-  lineHeight: 1.5,
-  borderRadius: '40px',
+  color: 'var(--button-color)',
+  textAlign: 'center',
+  verticalAlign: 'middle',
+  userSelect: 'none',
+  backgroundColor: 'var(--button-background-color)',
+  padding: '0.375rem 0.75rem',
+  fontSize: 'var(--button-font-size)',
+  lineHeight: 'var(--button-line-height)',
+  transition:
+    'color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out',
 };
+
+// const baseButton = {
+//   color: 'white',
+//   backgroundColor: 'black',
+//   fontSize: 11,
+//   fontWeight: 400,
+//   lineHeight: 1.5,
+//   borderRadius: '40px',
+// };
 
 function makeButton(overrides) {
   return {
@@ -26,15 +43,31 @@ function makeButton(overrides) {
   };
 }
 
-const light = {
+export default {
   ...base,
+  choice: {
+    base: {
+      ...baseButton,
+      color: 'var(--fv-grey-light)',
+    },
+    disabled: {
+      opacity: '0.5',
+    },
+    selected: {
+      backgroundColor: 'var(--fv-grey-light)',
+      color: 'white',
+    },
+  },
   buttons: {
-    primary: makeButton({ backgroundColor: '#277CEA' }),
-    secondary: makeButton({ backgroundColor: '#EA8BFF' }),
-    tertiary: makeButton({ backgroundColor: '#6848E1' }),
-    quaternary: makeButton({ backgroundColor: '#3CA773' }),
+    primary: makeButton({ backgroundColor: '#277CEA', color: 'white' }),
+    secondary: makeButton({ backgroundColor: '#EA8BFF', color: 'white' }),
+    tertiary: makeButton({ backgroundColor: '#6848E1', color: 'white' }),
+    quaternary: makeButton({ backgroundColor: '#3CA773', color: 'white' }),
     dropdown: makeButton({ backgroundColor: '#EEEEEE', color: 'black' }),
     rightArrow: makeButton({ backgroundColor: '#3CA773', color: 'white' }),
+  },
+  buttonRounded: {
+    borderRadius: 'var(--button-border-radius)',
   },
   input: {
     base: {
@@ -54,9 +87,9 @@ const light = {
       backgroundSize: '1rem',
       paddingRight: 32,
     },
+    checkbox: {
+      color: '#85D78D',
+      backgroundColor: base.greyLight,
+    },
   },
-};
-
-export default {
-  light,
 };

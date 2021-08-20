@@ -1,4 +1,4 @@
 import React from 'react';
-import themes from './themes';
+import theme from './themes';
 
-export default React.createContext(themes.light);
+export default React.createContext(theme);

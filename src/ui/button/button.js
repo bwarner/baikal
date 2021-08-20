@@ -23,11 +23,9 @@ export default function Button({
         --button-border-color: currentcolor;
         --button-font-size: ${buttonTheme.fontSize};
         --button-line-height: ${buttonTheme.lineHeight};
-        --button-border-radius: ${rounded ? buttonTheme.borderRadius : 0};
         border-style: solid;
         border-width: 1px;
         border-color: var(--border-button-color);
-        border-radius: var(--button-border-radius);
         &:hover {
           opacity: var(--button-hover-opacity);
         }
@@ -37,11 +35,9 @@ export default function Button({
         --button-background-color: ${buttonTheme.backgroundColor};
         --button-font-size: ${buttonTheme.fontSize};
         --button-line-height: ${buttonTheme.lineHeight};
-        --button-border-radius: ${rounded ? buttonTheme.borderRadius : 0};
         border-style: solid;
         border-width: 1px;
         border-color: var(--border-button-color);
-        border-radius: var(--button-border-radius);
         &:hover {
           opacity: var(--button-hover-opacity);
         }
@@ -51,7 +47,7 @@ export default function Button({
   return (
     <button
       type="button"
-      css={[baseButtonStyle, buttonStyle, styles]}
+      css={[baseButtonStyle, buttonStyle, rounded && theme.buttonRounded, styles]}
       {...props}
     />
   );

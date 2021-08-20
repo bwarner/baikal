@@ -8,16 +8,25 @@ const col = {
 };
 
 export default function Col({
-  tag: Tag, width, extraCls, children,
+  tag: Tag,
+  width,
+  extraCls,
+  className,
+  children,
 }) {
   const colStyle = {
     '--width': width,
   };
-  return <Tag css={[col, colStyle, extraCls]}>{children}</Tag>;
+  return (
+    <Tag className={className} css={[col, colStyle, extraCls]}>
+      {children}
+    </Tag>
+  );
 }
 
 Col.propTypes = {
   tag: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
+  className: PropTypes.string,
   children: PropTypes.node,
   width: PropTypes.number,
   extraCls: PropTypes.object,

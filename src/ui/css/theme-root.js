@@ -8,6 +8,8 @@ function ThemeRoot({
   baseSize,
   typeScale,
   input,
+  greyLight,
+  greyDark,
 }) {
   // eslint-disable-next-line no-unused-expressions
   injectGlobal`
@@ -25,11 +27,14 @@ function ThemeRoot({
     --button-font-size: var(--text-sm);
     --button-line-height: 1.5;
     --button-border-color: transparent;
-    --button-border-radius: 0;
+    --button-border-radius: 40px;
     --button-hover-opacity: 0.7;
     --fv-input-background-color: ${input.base.backgroundColor};
     --fv-input-border: ${input.base.border};
     --fv-input-border-radius: ${input.base.borderRadius};
+    --fv-grey-light: ${greyLight};
+    --fv-grey-dark: ${greyDark};
+    --fv-checkbox-color: ${input.checkbox.color}
   }
   * { box-sizing: border-box; }
   h1: { font-size: --var(h1); }

@@ -23,7 +23,6 @@ export const Glyphs = () => (
     >
       {Object.keys(icons).map((key, index, oj) => {
         const icon = icons[key];
-        debugger;
         console.log(`key: ${key} icons[${key}]: ${typeof icon}`);
         return <div key={key}>{icons[key]()}</div>;
       })}

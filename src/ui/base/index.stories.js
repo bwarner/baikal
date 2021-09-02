@@ -375,7 +375,7 @@ export const Base = () => {
               <Tags
                 tags={[
                   'TRAVEL',
-                  'HOLIDAY',
+                  'BAIKAL',
                   'LAKE',
                   'TRIP',
                   'VISTING',

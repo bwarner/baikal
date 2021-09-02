@@ -5,12 +5,12 @@ import PropTypes from 'prop-types';
 
 const defaultFontFamily = 'icomoon';
 
-const Icon = memo(function Icon({ 
+const Icon = memo(function Icon({
   className,
   style,
   code,
   fontFamily = defaultFontFamily,
- }) {
+}) {
   return (
     <span
       className={className}

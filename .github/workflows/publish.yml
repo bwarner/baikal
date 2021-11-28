@@ -1,4 +1,4 @@
-name: npm-publish
+name: publish
 on:
   push:
     branches:
@@ -17,7 +17,9 @@ jobs:
           registry-url: 'https://npm.pkg.github.com'
       - name: Publish if version has been updated
         run: yarn
-      - run: yarn publish
+      - name: Publish
+        if: github.actor!= 'dependabot[bot]'
+        run: yarn publish
       env: # More info about the environment variables in the README
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Leave this as is, it's automatically generated
         NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }} #

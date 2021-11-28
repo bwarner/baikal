@@ -4,12 +4,11 @@ import { jsx } from '@emotion/core';
 import PropTypes from 'prop-types';
 
 const menuItemStyle = {
-  minHeight: 44,
-  backgroundColor: 'currentColor',
-  color: 'red',
-  borderColor: 'grey',
-  borderWidth: 1,
-  borderStyle: 'solid',
+  // minHeight: 44,
+  // backgroundColor: 'currentColor',
+  // borderColor: 'grey',
+  // borderWidth: 1,
+  // borderStyle: 'solid',
 };
 
 const menuItemSelectedStyle = {
@@ -27,9 +26,7 @@ export default function MenuItem({
       role="presentation"
       {...rest}
     >
-      <a href="#">
-        {children}
-      </a>
+      {children}
     </li>
   );
 }

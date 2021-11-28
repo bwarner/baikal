@@ -5,6 +5,7 @@ import Menu from './menu';
 import MenuItem from './menu-item';
 import { useMenu } from './menu-hooks';
 import MenuIcon from '../svg/icons/menu';
+import PushStateLink from '../base/push-state-link';
 
 export default {
   title: 'Navigation',
@@ -34,7 +35,7 @@ export function NavSimple() {
   return (
     <div>
       <div css={containerStyle}>
-        <div css={cellStyle}>
+        <div>
           <Nav
             header={() => (
               <div css={hamburgerStyle}>
@@ -44,41 +45,28 @@ export function NavSimple() {
             initialSelection="k2"
             expanded={expanded}
           >
-            <Menu
-              initialSelection="k2"
-              expanded={expanded}
-            >
-              <>
-                <MenuItem
-                  selected={selected === 'k1'}
-                  css={selected === 'k1' && { outline: '2px solid red' }}
-                  onClick={() => {
-                    console.log('k1 clicked');
-                    setSelected('k1');
-                  }}
-                >
-                  <span id="k1">Hello1</span>
-                </MenuItem>
-                <MenuItem
-                  selected={selected === 'k2'}
-                  css={
-                    selected === 'k2' && {
-                      backgroundColor: 'grey',
-                      outline: '2px solid red',
-                    }
-                  }
-                  onClick={() => setSelected('k2')}
-                >
-                  <span id="k2">Hello2</span>
-                </MenuItem>
-                <MenuItem
-                  selected={selected === 'k3'}
-                  css={selected === 'k3' && { outline: '2px solid red' }}
-                  onClick={() => setSelected('k3')}
-                >
-                  <span id="k3">Hello3</span>
-                </MenuItem>
-              </>
+            <Menu>
+              <MenuItem
+                selected={selected === 'k1'}
+                onClick={() => {
+                  console.log('k1 clicked');
+                  setSelected('k1');
+                }}
+              >
+                <PushStateLink href="/cow" id="k1">Cow</PushStateLink>
+              </MenuItem>
+              <MenuItem
+                selected={selected === 'k2'}
+                onClick={() => setSelected('k2')}
+              >
+                <PushStateLink href="/chicken" id="k1">Chicken</PushStateLink>
+              </MenuItem>
+              <MenuItem
+                selected={selected === 'k3'}
+                onClick={() => setSelected('k3')}
+              >
+                <PushStateLink href="/dog" id="k1">Dog</PushStateLink>
+              </MenuItem>
             </Menu>
           </Nav>
         </div>

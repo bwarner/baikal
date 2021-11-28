@@ -13,13 +13,7 @@ export default function Menu({
 }) {
   return (
     <ul>
-      <div css={headerStyle}>
-        {toggle && toggle()}
-        {header && header()}
-      </div>
-      <ul>
-        {children}
-      </ul>
+      {children}
     </ul>
   );
 }

@@ -33,12 +33,14 @@ jobs:
       run: yarn install
     - name: Build
       run: yarn build
-    - uses: actions/upload-artifact@v2
+    - name: Upload Artifacts
+      if: github.actor!= 'dependabot[bot]'
+      uses: actions/upload-artifact@v2
       with:
         name: Storybook Static Site
         path: storybook-static
     - name: Deploy to GitHub Pages
-      if: success()
+      if: success() && github.actor!= 'dependabot[bot]'
       uses: crazy-max/ghaction-github-pages@v2
       with:
         target_branch: gh-pages

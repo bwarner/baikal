@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1000 1000">
+  <path class="svg-font" d="M96 0l-96 160v736h256v128h128l128-128h160l288-288v-608h-864zM832 544l-160 160h-160l-128 128v-128h-192v-576h640v416z" />
+  <path class="svg-font" d="M608 256h96v256h-96v-256z" />
+  <path class="svg-font" d="M416 256h96v256h-96v-256z" />
+</svg>

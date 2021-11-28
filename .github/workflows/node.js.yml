@@ -29,6 +29,10 @@ jobs:
       with:
         node-version: '14.x'
         registry-url: 'https://npm.pkg.github.com'
+    - name: Install
+      run: yarn install
+    - name: Build
+      run: yarn build
     - uses: actions/upload-artifact@v2
       with:
         name: Storybook Static Site
